@@ -1,21 +1,73 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { connect } from 'react-redux';
+import Navigation from './components/Navigation';
+//import Footer from './pages/Footer';
+//import ContactPage from './pages/ContactUsPage';
+//import AboutPage from './pages/AboutUsPage';
+//import Home from './pages/Homepage';
+import Router from './components/Router';
 
+
+
+const NotFound = () => <h2>Error! 404</h2>
+
+
+/*const routes = {
+  '/': Home,
+  '/contact': ContactPage,
+  '/about': AboutPage,
+  '/websocket': Websocket,
+  // '/user/:name': PrivateMessagePage, //this.props.name
+  'error': NotFound,
+}
+*/
 class App extends Component {
+  constructor() {
+    super()
+    this.state = { in: true }
+  }
+
+  componentDidMount() {
+    const f = () => {
+      this.setState({ in: false })
+    }
+    setTimeout(f, 2000)
+  }
+
   render() {
+    const {
+
+      location,
+      oldlocation,
+
+
+    } = this.props
+
+
+
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className='App'>
+        <Navigation />
+
       </div>
     );
+    /*<Footer />
+    <hr />
+    <Router location={oldlocation} routes={routes} />
+    <Router location={location} routes={routes} />*/
   }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+
+
+
+
+
+  location: state.oldLocation.currentLocation,
+  oldlocation: state.oldLocation.previousLocation,
+})
+
+export default connect(mapStateToProps)(App);
