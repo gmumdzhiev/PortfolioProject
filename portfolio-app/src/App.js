@@ -20,9 +20,9 @@ const routes = {
   '/contact': ContactPage,
   '/about': AboutPage,
   '/portfolio': PortfolioPage,
+  'error': NotFound,
   /*'/overview': OverviewPage,
-   'error': NotFound,
- */
+  */
 }
 
 class App extends Component {

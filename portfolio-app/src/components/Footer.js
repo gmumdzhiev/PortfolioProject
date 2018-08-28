@@ -4,16 +4,17 @@ import React from 'react';
 const Footer = () => (
   <div id='footer'>
 
-    <a className='link' target='_blank' rel='noopener noreferrer' href='https://linkedin.com/in/georgi-mumdzhiev-7842b814a'>
-      <img id='linkd' /*src={linkd}*/ alt='linkd.icon' />
+    <a className='fa fa-linkedin' target='_blank' rel='noopener noreferrer' href='https://linkedin.com/in/georgi-mumdzhiev-7842b814a'>
+      <img id='fa fa-linkedin' />
     </a>
 
-    <a className='git' target='_blank' rel='noopener noreferrer' href='https://github.com/pandamastr'>
-      <img id='github' /*src={github}*/ alt='github.icon' />
+    <a className='fa fa-github' target='_blank' rel='noopener noreferrer' href='https://github.com/gmumdzhiev'>
+      <img id='fa fa-github' />
     </a>
 
-    <a href="mailto:george.mumdzhiev@gmail.com">Email Us</a>
-
+    <a className='fa fa-google' href="mailto:george.mumdzhiev@gmail.com">
+      <img id='fa fa-google' />
+    </a>
   </div>
 )
 export default Footer
