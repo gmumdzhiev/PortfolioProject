@@ -41,9 +41,11 @@ class App extends Component {
     return (
       <div className='App'>
         <Navigation />
-
         <hr />
         <Router location={location} routes={routes} />
+        <div class="content-container">
+          <div class="blur"></div>
+        </div>
         <Footer />
       </div>
     );

@@ -1,20 +1,24 @@
 import React from 'react';
-//import github from '../img/if_github_291716.svg'
-//import linkd from '../img/if_linked_in_online_social_media_734393.svg'
+import phone from './img/phone.svg';
+import email from './img/mail.svg';
+import pin from './img/pin.svg';
+
 const Footer = () => (
   <div id='footer'>
 
-    <a className='fa fa-linkedin' target='_blank' rel='noopener noreferrer' href='https://linkedin.com/in/georgi-mumdzhiev-7842b814a'>
-      <img id='fa fa-linkedin' />
-    </a>
+    <div id='social'>
 
-    <a className='fa fa-github' target='_blank' rel='noopener noreferrer' href='https://github.com/gmumdzhiev'>
-      <img id='fa fa-github' />
-    </a>
+      <a className='fa fa-linked-in' target='_blank' rel='noopener noreferrer' href='https://linkedin.com/in/georgi-mumdzhiev-7842b814a'></a>
+      <a className='fa fa-github' target='_blank' rel='noopener noreferrer' href='https://github.com/gmumdzhiev'></a>
+      <a className='fa fa-google' rel='noopener noreferrer' href="mailto:george.mumdzhiev@gmail.com"></a>
 
-    <a className='fa fa-google' href="mailto:george.mumdzhiev@gmail.com">
-      <img id='fa fa-google' />
-    </a>
+    </div>
+
+    <div id='elements'>
+      <img id='phone' src={phone} /> <p>+32 495 85 13 61</p>
+      <img id='email' src={email} /> <p>george.mumdzhiev@gmail.com</p>
+      <img id='pin' src={pin} /> <p>Antwerp , Belgium</p>
+    </div>
   </div>
 )
 export default Footer
