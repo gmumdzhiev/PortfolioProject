@@ -9,7 +9,7 @@ import PortfolioPage from './pages/PortfolioPage';
 //import OverviewPage from './pages/Overview'; 
 import Home from './pages/HomePage';
 import Router from './components/Router';
-
+import PageTransition from 'react-router-page-transition';
 
 
 const NotFound = () => <h2>Error! 404</h2>
@@ -41,11 +41,12 @@ class App extends Component {
     return (
       <div className='App'>
         <Navigation />
-
-        <Router location={location} routes={routes} />
-        <div class="content-container">
-          <div class="blur"></div>
-        </div>
+        <PageTransition>
+          <Router location={location} routes={routes} />
+          <div class="content-container">
+            <div class="blur"></div>
+          </div>
+        </PageTransition>
         <Footer />
       </div>
     );
@@ -63,3 +64,16 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps)(App);
+
+export default class ListPage extends React.Component {
+  render() {
+    return (
+      <div id="list-page" class="transition-item">
+        <Router location={location} routes={routes} />
+        <div class="content-container">
+          <div class="blur"></div>
+        </div>
+      </div>
+    );
+  }
+}
