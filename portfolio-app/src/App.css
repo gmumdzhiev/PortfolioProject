@@ -87,16 +87,36 @@ nav{
 
 button{
   color:#7a7a7a;
-  background-color: #051222;
+  background: transparent;
   border: none;
+  outline: none;
+  display:block;
   float:right;
-  vertical-align: middle;
+  position:relative;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   font-size:15px;
   text-decoration: none;
-  outline:none;
-  margin: 25px 0 0px 20px;
+  transition: 0.3s;
+  margin: 25px 20px 0px 20px;
+  padding: 10px;
+}
+button:before{
+  content: '';
+  border-bottom: 1px solid #7a7a7a;
+  padding: 0 10px;
+  position: absolute;
+  bottom:  0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  transition: 0.3s;
+}
+button:hover:before{
+width: 100%;
+padding: 0 ;
+border-bottom: 1px solid #d35360;
 }
 
 button:hover{
@@ -104,7 +124,8 @@ button:hover{
 }
 
 button:active{
-  color:#a5424e;
+  color: white;
+  transition: none;
 }
 
 
