@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Lato"); 
 body,
 html {
+  overflow: auto;
   margin: 0;
 }
 
@@ -60,26 +62,74 @@ html {
 
 p{
   color: #d35360;
+  display:inline-block;
+  margin: 50px 40px 0 10px;  
+  overflow: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 13px;
 }
 
+img{
+  height: 100%;
+  vertical-align: middle;
+}
 /* NAVIGATION */
 
 nav{
   background-color: #051222;
+  height: 80px;
+}
+button{
+  color:#7a7a7a;
+  background-color: #051222;
+  border: none;
+  float:right;
+  vertical-align: middle;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size:15px;
+  text-decoration: none;
+  outline:none;
 }
 
+button:hover{
+  color:#d35360;
+}
 
+button:active{
+  color:#a5424e;
+}
 /* FOOTER */
 
 #footer{
   background-color:#051222;
-  width:100%;
+  width: 100%;
   height: 100px;
   position: absolute;
   overflow: hidden;
   bottom: 0;
   }
 
+  @media only screen and (max-width: 480px) {
+    #footer > div {
+      float:none; /* Ensure stacking */
+      display:block; /* Ensure stacking */
+      text-align:center; /* Ensure horizontal centering of all footer content */
+    }
+
+    #footer #elements #social img {
+      position:relative;
+      padding-top: 1rem;  /* Reserve vertical space for phone number */
+    }
+
+    #footer #elements #social img p {
+      position:absolute; /* Causes the phone number to position above social buttons */
+      top:0;
+      left:0;
+      right:0;
+    }
+  }
 /* SOCIAL ICONS */
 
   #social{
@@ -126,4 +176,18 @@ nav{
   font-size: 30px;
 }
 
+.fa-instagram {
+  color:#d35360;
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+  font-size:  30px;
+}
+
 /* ELEMENTS ICONS */ 
+
+#elements{
+  padding: 0px 20px;
+  overflow: none;
+}

@@ -4,13 +4,13 @@ import Link from './Link'
 
 const Navigation = () => (
   <nav>
-    <Link to="/">Home</Link>
+    <Link to="/">&#9673; HOME</Link>
     {' '}
-    <Link to="/about">About</Link>
+    <Link to="/about">&#9673; ABOUT</Link>
     {' '}
-    <Link to="/Portfolio">Portfolio</Link>
+    <Link to="/Portfolio">&#9673; PORTFOLIO</Link>
     {' '}
-    <Link to="/contact">Contact</Link>
+    <Link to="/contact">&#9673; CONTACT</Link>
     {' '}
 
   </nav>
