@@ -43,8 +43,8 @@ class App extends Component {
         <Navigation />
         <PageTransition>
           <Router location={location} routes={routes} />
-          <div class="content-container">
-            <div class="blur"></div>
+          <div className="content-container">
+            <div className="blur"></div>
           </div>
         </PageTransition>
         <Footer />
@@ -55,17 +55,13 @@ class App extends Component {
 
 const mapStateToProps = (state) => ({
 
-
-
-
-
   location: state.oldLocation.currentLocation,
   oldlocation: state.oldLocation.previousLocation,
 })
 
 export default connect(mapStateToProps)(App);
 
-export default class ListPage extends React.Component {
+/*export default class ListPage extends React.Component {
   render() {
     return (
       <div id="list-page" class="transition-item">
@@ -76,4 +72,4 @@ export default class ListPage extends React.Component {
       </div>
     );
   }
-}
+}*/
